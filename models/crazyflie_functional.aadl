@@ -1,93 +1,111 @@
-package Crazyflie_functional
-
 -- This package models the abstract functional chain of the Crazyflie,
 -- from https://wiki.bitcraze.io/doc:crazyflie:dev:fimware:sensor_to_control
 
-public
+package Crazyflie_functional
 
+public
+  -- Accelerometer --
   abstract Accelero
   features
-    Accelero_Out : out data port;
+    Accelero_Out: out data port;
 
   flows
-    f1 : flow source Accelero_Out {latency => 100 us .. 300 us; };		
+    f1: flow source Accelero_Out {latency => 100 us .. 300 us;};		
 
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
   end Accelero;
 
+ -- Gyroscope --
   abstract Gyro
   features
-    Gyro_Out : out data port;
+    Gyro_Out: out data port;
     
   flows
-    f1 : flow source Gyro_Out {latency => 100 us .. 300 us; };		
+    f1: flow source Gyro_Out {latency => 100 us .. 300 us;};		
     
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
   end Gyro;
 
+  -- Magnetometer --
   abstract Magneto
   features
-    Magneto_Out : out data port;
+    Magneto_Out: out data port;
     
  flows
-   f1 : flow source Magneto_Out {latency => 100 us .. 300 us; };		
+   f1: flow source Magneto_Out {latency => 100 us .. 300 us;};		
     
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
   end Magneto;
 
+  -- SENSOR FUSION --
   abstract Sensor_Fusion
   features
-    Accelero_In : in data port;
-    Gyro_In     : in data port;
-    Magneto_In  : in data port;
-    Data_F_Out  : out data port; -- Fusioned data
+    Accelero_In: in data port;
+    Gyro_In:     in data port;
+    Magneto_In:  in data port;
+    
+    Data_F_Out: out data port; -- Fused data
     
   flows
-    f1 : flow path Accelero_In -> Data_F_Out {latency => 200 us .. 400 us; };	
-    f2 : flow path Gyro_In -> Data_F_Out {latency => 200 us .. 400 us; };
+    f1: flow path Accelero_In -> Data_F_Out {latency => 200 us .. 400 us;};	
+    f2: flow path Gyro_In -> Data_F_Out {latency => 200 us .. 400 us;};
+    -- Caleb Matthiesen addition for question Q2
+    f3: flow path Magneto_In -> Data_F_Out {latency => 200 us .. 400 us;};
     	   
   properties
     Dispatch_Protocol => Periodic;
     Period => 4 ms; --  250 Hz
   end Sensor_Fusion;
 
+  -- CONTROLLER --
   abstract Controller
   features
-    Data_F_In : in data port;
-    Gyro_In   : in data port;
-    Motor_Out : out data port;
-    TC : in data port;
+    Data_F_In: in data port;
+    Gyro_In:   in data port;
+    TC:        in data port;
+    
+    Motor_Out: out data port;
+    
   flows
-  	f1 : flow path Data_F_In -> Motor_Out {latency => 200 us .. 400 us; };	
-    f2 : flow path Gyro_In -> Motor_Out {latency => 200 us .. 400 us; };	
+  	f1: flow path Data_F_In -> Motor_Out {latency => 200 us .. 400 us;};	
+    f2: flow path Gyro_In -> Motor_Out {latency => 200 us .. 400 us;};
+    -- Caleb Matthiesen addition for question Q2
+    f3: flow path TC -> Motor_out {latency => 200 us .. 400 us;};
+    
     
   properties
     Dispatch_Protocol => Periodic;
     Period => 2 ms; --  500 Hz
   end Controller;
 
+  -- MOTORS --
   abstract Motors
   features
-    Motor_In : in data port;
+    Motor_In: in data port;
     
   flows
-    f1 : flow sink Motor_In {latency => 100 us .. 500 us; };
+    f1: flow sink Motor_In {latency => 100 us .. 500 us;};
     			
   properties
---    Dispatch_Protocol => Aperiodic;
+    -- Dispatch_Protocol => Aperiodic;
     Dispatch_Protocol => Periodic;
     Period => 2ms;
   end Motors;
 
+  -- PILOT --
   abstract Pilot
   features
-	Order : out data port;
+	Order: out data port;
+	
+  flows
+  	-- Caleb Matthiesen addition for question Q2	
+    f1: flow source Order {latency => 100 us .. 300 us;}; 		
   end Pilot;
 
   system Crazyflie_Functional_Chain
@@ -95,37 +113,50 @@ public
 
   system implementation Crazyflie_Functional_Chain.impl
   subcomponents
-    --  Sensing
-    Acc        : abstract Accelero;
-    Gyro       : abstract Gyro;
-    Magneto    : abstract Magneto;
+    -- Sensing
+    Acc: abstract Accelero;
+    Gyro: abstract Gyro;
+    Magneto: abstract Magneto;
+    Pilot: abstract Pilot;
 
-    Pilot      : abstract Pilot;
+    -- Computing
+    Fusion: abstract Sensor_Fusion;
+    Controller: abstract Controller;
 
-    --  Computing
-    Fusion     : abstract Sensor_Fusion;
-    Controller : abstract Controller;
-
-    --  Acting
-    Motors : abstract Motors;
+    -- Acting
+    Motors: abstract Motors;
 
   connections
-    C1 : port Acc.Accelero_Out     -> Fusion.Accelero_In;
-    C2 : port Gyro.Gyro_Out        -> Fusion.Gyro_In;
-    C3 : port Magneto.Magneto_Out  -> Fusion.Magneto_In;
-
-    C4 : port Gyro.Gyro_Out        -> Controller.Gyro_In;
-    C5 : port Fusion.Data_F_Out    -> Controller.Data_F_In;
-
-    C6 : port Controller.Motor_Out -> Motors.Motor_In;
-
-    C7 : port Pilot.Order -> Controller.TC;
+    C1: port Acc.Accelero_Out -> Fusion.Accelero_In;
+    C2: port Gyro.Gyro_Out -> Fusion.Gyro_In;
+    C3: port Magneto.Magneto_Out -> Fusion.Magneto_In;
+    C4: port Gyro.Gyro_Out -> Controller.Gyro_In;
+    C5: port Fusion.Data_F_Out -> Controller.Data_F_In;
+    C6: port Controller.Motor_Out -> Motors.Motor_In;
+    C7: port Pilot.Order -> Controller.TC;
 
   flows
-  	f_etef1 : end to end flow Gyro.f1 -> C2 -> Fusion.f2 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
-  	f_etef1bis : end to end flow Gyro.f1 -> C4 -> Controller.f2 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
-    f_etef2 : end to end flow Acc.f1 -> C1 -> Fusion.f1 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
+ 	-- Gyro via Fusion to Controller to Motors
+  	f_etef1: end to end flow Gyro.f1 -> C2 -> Fusion.f2 -> C5
+  		-> Controller.f1 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
+    
+    -- Accelerometer to Fusion to Controller to Motors
+    f_etef2: end to end flow Acc.f1 -> C1 -> Fusion.f1 -> C5
+    	-> Controller.f1 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
+    	
+    -- Caleb Matthiesen addition for question Q2
+    -- Magnetometer to Fusion to Controller to Motors
+    f_etef3: end to end flow Magneto.f1 -> C3 -> Fusion.f3 -> C5
+    	-> Controller.f1 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
+    	
+    -- Gyro to Controller to Motors
+  	f_etef1bis: end to end flow Gyro.f1 -> C4 -> 
+  		Controller.f2 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
+    
+    -- Caleb Matthiesen addition for question Q2
+    -- Commander (Pilot) to Controller to Motors
+    f_etef2bis: end to end flow Pilot.f1 -> C7 -> 
+    	Controller.f3 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
     
   end Crazyflie_Functional_Chain.impl;
-
 end Crazyflie_functional;

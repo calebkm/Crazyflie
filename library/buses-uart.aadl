@@ -1,13 +1,14 @@
 -- This package models UART bus
 
 package Buses::UART
+
 public
   with Bus_Properties;
 
   feature group UART_Pins
   features
-    RX :  in event port;
-    TX : out event port;
+    RX: in event port;
+    TX: out event port;
   end UART_Pins;
 
   bus UART
@@ -22,7 +23,6 @@ public
 
   device Generic_UART
   features
-    UART : requires bus access UART.impl;
+    UART: requires bus access UART.impl;
   end Generic_UART;
-
 end Buses::UART;

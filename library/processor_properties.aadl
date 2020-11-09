@@ -5,7 +5,6 @@
 --  modeled as virtual processor to separate concerns.
 
 property set Processor_Properties is
-
   Processor_Family : enumeration
         (ARM, AVR, SPARC, PowerPC, x86, x86_64) applies to (processor);
 
@@ -36,5 +35,4 @@ property set Processor_Properties is
    -- or inversely
 
    Core_Id : aadlinteger 0 .. Max_Aadlinteger applies to (virtual processor);
-
 end Processor_Properties;
