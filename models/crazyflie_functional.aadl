@@ -78,10 +78,9 @@ public
     -- Caleb Matthiesen addition for question Q2
     f3: flow path TC -> Motor_out {latency => 200 us .. 400 us;};
     
-    
   properties
     Dispatch_Protocol => Periodic;
-    Period => 2 ms; --  500 Hz
+    Period => 2 ms; -- 500 Hz
   end Controller;
 
   -- MOTORS --
@@ -105,7 +104,7 @@ public
 	
   flows
   	-- Caleb Matthiesen addition for question Q2	
-    f1: flow source Order {latency => 100 us .. 300 us;}; 		
+    f1: flow source Order {latency => 100 us .. 300 us;}; -- LATENCY HERE?
   end Pilot;
 
   system Crazyflie_Functional_Chain
@@ -155,7 +154,7 @@ public
     
     -- Caleb Matthiesen addition for question Q2
     -- Commander (Pilot) to Controller to Motors
-    f_etef2bis: end to end flow Pilot.f1 -> C7 -> 
+    f_etef4: end to end flow Pilot.f1 -> C7 -> 
     	Controller.f3 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
     
   end Crazyflie_Functional_Chain.impl;

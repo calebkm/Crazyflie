@@ -15,15 +15,13 @@ public
     STM32F405_Firmware: process Crazyflie_Software::STM32F405_Firmware.impl;
 
   connections
-    C10: port nRF51822_Firmware.Syslink_Packet_TX
-      -> STM32F405_Firmware.Syslink_Packet_Rx;
-    C10b: port STM32F405_Firmware.Syslink_Packet_TX
-      -> nRF51822_Firmware.Syslink_Packet_Rx;
-    C11: port MPU9250.DOF6 -> STM32F405_Firmware.DOFs;
-    C12: port STM32F405_Firmware.Rate_1 -> M1.rate;
-    C13: port STM32F405_Firmware.Rate_2 -> M2.rate;
-    C14: port STM32F405_Firmware.Rate_3 -> M3.rate;
-    C15: port STM32F405_Firmware.Rate_4 -> M4.rate;
+    C10:  port nRF51822_Firmware.Syslink_Packet_TX -> STM32F405_Firmware.Syslink_Packet_Rx;
+    C10b: port STM32F405_Firmware.Syslink_Packet_TX -> nRF51822_Firmware.Syslink_Packet_Rx;
+    C11:  port MPU9250.DOF6 -> STM32F405_Firmware.DOFs;
+    C12:  port STM32F405_Firmware.Rate_1 -> M1.rate;
+    C13:  port STM32F405_Firmware.Rate_2 -> M2.rate;
+    C14:  port STM32F405_Firmware.Rate_3 -> M3.rate;
+    C15:  port STM32F405_Firmware.Rate_4 -> M4.rate;
 
   flows
     -- etef1 represents the functional chain from MPU9250 IMU to STM32
@@ -35,6 +33,11 @@ public
     -- to STM32 firmware to one of the propellers.
     etef2: end to end flow nRF51822_Firmware.f1 -> C10 -> STM32F405_Firmware.f1
       -> C12 -> M1.f1 {latency => 0 ms .. 2 ms;};
+      
+    -- Caleb Matthiesen addition for question Q2
+    -- etef3 represents the flow from the STM32 to the nRF.
+    etef3: end to end flow STM32F405_Firmware.f3 -> C10b
+    	-> nRF51822_Firmware.f2 {latency => 0 ms .. 2 ms;};
 
   properties
     Actual_Processor_Binding => (reference (STM32F405)) applies to STM32F405_Firmware;
