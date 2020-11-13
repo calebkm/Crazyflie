@@ -94,7 +94,7 @@ public
   properties
     -- Dispatch_Protocol => Aperiodic;
     Dispatch_Protocol => Periodic;
-    Period => 2ms;
+    Period => 2 ms; -- 500 Hz
   end Motors;
 
   -- PILOT --
@@ -135,7 +135,7 @@ public
     C7: port Pilot.Order -> Controller.TC;
 
   flows
- 	-- Gyro via Fusion to Controller to Motors
+ 	-- Gyro to Fusion to Controller to Motors
   	f_etef1: end to end flow Gyro.f1 -> C2 -> Fusion.f2 -> C5
   		-> Controller.f1 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
     

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ASCII"?>
-<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="3">
-  <element id="0" manual="true" autoContentsFilter="allow_all">
-    <element id="45" manual="true" autoContentsFilter="allow_fundamental">
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="ca3d459a-e1a8-4b9a-82f7-2583c487b6bf" manual="true">
+    <element uuid="278f2ac7-12cf-42e9-819e-c7058a096f44" manual="true">
       <bo>
         <seg>annex_subclause</seg>
-        <seg>emv2</seg>
+        <seg>EMV2</seg>
         <seg>0</seg>
       </bo>
       <position x="1770.0" y="546.0"/>
       <size width="150.0" height="51.0"/>
     </element>
-    <element id="46" autoContentsFilter="allow_fundamental">
-      <element id="86" autoContentsFilter="allow_fundamental">
+    <element uuid="3786c9cd-f006-4e51-adef-7e09089e0037" manual="true">
+      <element uuid="54fe2698-d578-44ce-9b40-bdeb6d144877" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -19,19 +19,19 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c1</seg>
+        <seg>C1</seg>
       </bo>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="55" autoContentsFilter="allow_fundamental">
-      <element id="92">
+    <element uuid="9165f5b6-7d50-4be0-aa77-258f362925cb" manual="true">
+      <element uuid="0360606e-3084-4970-8e49-496cb1ff809b" manual="true">
         <bo>
           <seg>pvg</seg>
-          <seg>deployment_properties::actual_connection_binding</seg>
-          <seg>1</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>982a2dd1-68fc-4952-813a-2024be38fe5c</seg>
         </bo>
       </element>
-      <element id="68" autoContentsFilter="allow_fundamental">
+      <element uuid="479ebe8f-3c64-47f8-8df2-428daf683565" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -39,12 +39,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c10</seg>
+        <seg>C10</seg>
       </bo>
       <primaryLabelPosition x="-8.0" y="-20.0"/>
     </element>
-    <element id="56" autoContentsFilter="allow_fundamental">
-      <element id="76" autoContentsFilter="allow_fundamental">
+    <element uuid="7a22ee37-5a08-4ea8-a8ba-b20dad96dd3d" manual="true">
+      <element uuid="d417658b-c1f1-47db-a881-ac11f7967398" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -52,19 +52,19 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c10b</seg>
+        <seg>C10b</seg>
       </bo>
       <primaryLabelPosition x="-11.0" y="-20.0"/>
     </element>
-    <element id="57" autoContentsFilter="allow_fundamental">
-      <element id="93">
+    <element uuid="03c8120f-eef9-4988-b0eb-e832379b63ee" manual="true">
+      <element uuid="5b46dcce-cf1f-467c-af74-13cd38432166" manual="true">
         <bo>
           <seg>pvg</seg>
-          <seg>deployment_properties::actual_connection_binding</seg>
-          <seg>2</seg>
+          <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+          <seg>5ce0fed7-8c10-44dc-bf4a-31132ef2374c</seg>
         </bo>
       </element>
-      <element id="69" autoContentsFilter="allow_fundamental">
+      <element uuid="4221fbbf-3f35-45d7-a165-e5de74418ab9" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -72,12 +72,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c11</seg>
+        <seg>C11</seg>
       </bo>
       <primaryLabelPosition x="-8.0" y="-20.0"/>
     </element>
-    <element id="58" autoContentsFilter="allow_fundamental">
-      <element id="71" autoContentsFilter="allow_fundamental">
+    <element uuid="fbf446f1-3624-4d19-a65c-7437a52d026d" manual="true">
+      <element uuid="b3960aef-0796-47e9-83e9-04758e853da3" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -85,12 +85,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c12</seg>
+        <seg>C12</seg>
       </bo>
       <primaryLabelPosition x="-8.0" y="-20.0"/>
     </element>
-    <element id="59" autoContentsFilter="allow_fundamental">
-      <element id="72" autoContentsFilter="allow_fundamental">
+    <element uuid="9be4c13a-aab2-48cf-b868-2fce29523baa" manual="true">
+      <element uuid="6ef65244-57f7-439f-a95a-229763f141bd" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -98,12 +98,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c13</seg>
+        <seg>C13</seg>
       </bo>
       <primaryLabelPosition x="-8.0" y="-20.0"/>
     </element>
-    <element id="60" autoContentsFilter="allow_fundamental">
-      <element id="64" autoContentsFilter="allow_fundamental">
+    <element uuid="ff0c01f5-8a75-4048-9ebd-3a85f05980ac" manual="true">
+      <element uuid="91f5950f-9b34-4e3e-a0ae-703e33332c3b" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -111,12 +111,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c14</seg>
+        <seg>C14</seg>
       </bo>
       <primaryLabelPosition x="-8.0" y="-20.0"/>
     </element>
-    <element id="61" autoContentsFilter="allow_fundamental">
-      <element id="66" autoContentsFilter="allow_fundamental">
+    <element uuid="c7d82877-7bf4-4529-b3bc-5c1308ce3358" manual="true">
+      <element uuid="968ece6b-0061-4199-9fbe-e7c26c5d452b" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -124,12 +124,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c15</seg>
+        <seg>C15</seg>
       </bo>
       <primaryLabelPosition x="-8.0" y="-20.0"/>
     </element>
-    <element id="47" autoContentsFilter="allow_fundamental">
-      <element id="85" autoContentsFilter="allow_fundamental">
+    <element uuid="26890b07-6123-45a6-b7ae-81c565833f07" manual="true">
+      <element uuid="757cc61f-24c0-435a-8e86-624f16157878" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -137,12 +137,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c2</seg>
+        <seg>C2</seg>
       </bo>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="48" autoContentsFilter="allow_fundamental">
-      <element id="84" autoContentsFilter="allow_fundamental">
+    <element uuid="0205c2b3-1623-40f0-b70b-30a5addb0101" manual="true">
+      <element uuid="b8c86737-6c03-43b7-8314-1b90f19b0e3d" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -150,12 +150,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c3</seg>
+        <seg>C3</seg>
       </bo>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="49" autoContentsFilter="allow_fundamental">
-      <element id="83" autoContentsFilter="allow_fundamental">
+    <element uuid="57611534-be0d-46dd-8bb0-2401bc4eeaa4" manual="true">
+      <element uuid="93fcdd27-c2fc-400b-aa09-883c1658a68b" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -163,12 +163,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c4</seg>
+        <seg>C4</seg>
       </bo>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="50" autoContentsFilter="allow_fundamental">
-      <element id="90" autoContentsFilter="allow_fundamental">
+    <element uuid="cecb7f98-add1-46a8-85a8-cd3aa9ad5dc9" manual="true">
+      <element uuid="76edf196-ffa5-4fd5-9d81-4d5c06d32e57" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -176,7 +176,7 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c5</seg>
+        <seg>C5</seg>
       </bo>
       <bendpoints>
         <point x="1926.0" y="131.0"/>
@@ -185,8 +185,8 @@
       </bendpoints>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="51" autoContentsFilter="allow_fundamental">
-      <element id="89" autoContentsFilter="allow_fundamental">
+    <element uuid="e4b6491b-0035-4392-8904-db058ba33cad" manual="true">
+      <element uuid="bd95eb0f-1bd9-4f6f-a483-530d8ef3b227" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -194,7 +194,7 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c6</seg>
+        <seg>C6</seg>
       </bo>
       <bendpoints>
         <point x="1928.0" y="216.0"/>
@@ -202,8 +202,8 @@
       </bendpoints>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="52" autoContentsFilter="allow_fundamental">
-      <element id="88" autoContentsFilter="allow_fundamental">
+    <element uuid="fd42f3ce-9c02-413c-92d4-a6e3d6531954" manual="true">
+      <element uuid="ad705809-477a-49bb-bae4-a815ee5f5f94" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -211,7 +211,7 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c7</seg>
+        <seg>C7</seg>
       </bo>
       <bendpoints>
         <point x="1929.0" y="304.0"/>
@@ -219,8 +219,8 @@
       </bendpoints>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="53" autoContentsFilter="allow_fundamental">
-      <element id="87" autoContentsFilter="allow_fundamental">
+    <element uuid="a3eeea99-4342-423d-a2b9-747368f18894" manual="true">
+      <element uuid="d02e0f80-a50b-4eca-9afc-6f1187daed33" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -228,7 +228,7 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c8</seg>
+        <seg>C8</seg>
       </bo>
       <bendpoints>
         <point x="1928.0" y="390.0"/>
@@ -236,8 +236,8 @@
       </bendpoints>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="54" autoContentsFilter="allow_fundamental">
-      <element id="79" autoContentsFilter="allow_fundamental">
+    <element uuid="89daeff3-7109-45ca-b414-cbdbf95275a4" manual="true">
+      <element uuid="97f0abcf-165f-4441-8008-fca71984bd17" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -245,17 +245,17 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>c9</seg>
+        <seg>C9</seg>
       </bo>
       <primaryLabelPosition x="-6.0" y="-20.0"/>
     </element>
-    <element id="73" autoContentsFilter="allow_fundamental">
+    <element uuid="f3f9cce4-4afe-43f0-8b0d-e830bf9e0b4b" manual="true">
       <bo>
         <seg>implementation_extension</seg>
       </bo>
     </element>
-    <element id="2" manual="true" autoContentsFilter="allow_type">
-      <element id="78" autoContentsFilter="allow_fundamental">
+    <element uuid="5ce0fed7-8c10-44dc-bf4a-31132ef2374c" manual="true">
+      <element uuid="5607e57e-cb43-4412-8710-40807d159ca1" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -263,34 +263,35 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>i2c</seg>
+        <seg>I2C</seg>
       </bo>
       <position x="678.0" y="399.0"/>
       <size width="158.0" height="50.0"/>
     </element>
-    <element id="8" manual="true" autoContentsFilter="allow_type">
-      <element id="10" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+    <element uuid="5aa24a0f-4f88-464b-b917-336c5de45d4b" manual="true">
+      <element uuid="69845fe9-6d87-4a31-811f-14dccdc5b2a9" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>pwm_bus</seg>
         </bo>
-        <position x="281.0" y="20.0"/>
+        <position x="288.0" y="20.0"/>
       </element>
-      <element id="9" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="da1ca55c-0cbb-4520-80b0-ab21465a4b6d" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>rate</seg>
         </bo>
         <position y="20.0"/>
       </element>
-      <element id="11" autoContentsFilter="allow_fundamental">
+      <element uuid="b11cf54b-df2d-40da-8a6a-d11220d5c42f" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f1</seg>
         </bo>
+        <position x="50.0" y="52.0"/>
         <primaryLabelPosition x="5.0" y="10.0"/>
       </element>
-      <element id="70" autoContentsFilter="allow_fundamental">
+      <element uuid="6358f66b-f807-49eb-886b-b9c66b60967d" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -298,34 +299,35 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>m1</seg>
+        <seg>M1</seg>
       </bo>
       <position x="1470.0" y="60.0"/>
       <size width="358.0" height="81.0"/>
     </element>
-    <element id="12" manual="true" autoContentsFilter="allow_type">
-      <element id="14" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+    <element uuid="39194046-2fa1-4cb4-87c5-3704e3b132eb" manual="true">
+      <element uuid="9c1339e6-6b7d-4e32-b099-539df76afadf" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>pwm_bus</seg>
         </bo>
-        <position x="281.0" y="20.0"/>
+        <position x="288.0" y="20.0"/>
       </element>
-      <element id="13" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="cfe435c3-98d2-4da4-9eb2-ae21c88b123d" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>rate</seg>
         </bo>
         <position y="20.0"/>
       </element>
-      <element id="15" autoContentsFilter="allow_fundamental">
+      <element uuid="130adc6c-fc70-4050-b5ab-758b6a1b2185" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f1</seg>
         </bo>
+        <position x="50.0" y="52.0"/>
         <primaryLabelPosition x="5.0" y="10.0"/>
       </element>
-      <element id="65" autoContentsFilter="allow_fundamental">
+      <element uuid="19ad3d8c-2781-4387-ad6b-9e522af0b967" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -333,34 +335,35 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>m2</seg>
+        <seg>M2</seg>
       </bo>
       <position x="1470.0" y="145.0"/>
       <size width="358.0" height="81.0"/>
     </element>
-    <element id="16" manual="true" autoContentsFilter="allow_type">
-      <element id="18" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+    <element uuid="88b1e12b-f88f-4f0f-b947-5c61217c5255" manual="true">
+      <element uuid="675786ee-15be-4c5f-a91a-a101221f46f0" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>pwm_bus</seg>
         </bo>
-        <position x="281.0" y="20.0"/>
+        <position x="288.0" y="20.0"/>
       </element>
-      <element id="17" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="2cd6eab1-1669-4f43-8169-0d43eeb4fba2" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>rate</seg>
         </bo>
         <position y="20.0"/>
       </element>
-      <element id="19" autoContentsFilter="allow_fundamental">
+      <element uuid="957b2e13-d923-43f3-8bb0-f03d2b04d676" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f1</seg>
         </bo>
+        <position x="50.0" y="52.0"/>
         <primaryLabelPosition x="5.0" y="10.0"/>
       </element>
-      <element id="63" autoContentsFilter="allow_fundamental">
+      <element uuid="17448c60-a120-45c6-a50f-0aeda6b241f9" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -368,34 +371,35 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>m3</seg>
+        <seg>M3</seg>
       </bo>
       <position x="1470.0" y="233.0"/>
       <size width="358.0" height="81.0"/>
     </element>
-    <element id="20" manual="true" autoContentsFilter="allow_type">
-      <element id="22" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+    <element uuid="69e9ba30-030e-4df3-885f-0f8f7c64fa16" manual="true">
+      <element uuid="75ef45b7-793b-4446-b450-e3287fc1fa9d" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>pwm_bus</seg>
         </bo>
-        <position x="281.0" y="20.0"/>
+        <position x="288.0" y="20.0"/>
       </element>
-      <element id="21" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="bd8f6ee2-b3a4-442d-a030-6d84fdc7b1b5" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>rate</seg>
         </bo>
         <position y="20.0"/>
       </element>
-      <element id="23" autoContentsFilter="allow_fundamental">
+      <element uuid="cbea8782-f0dc-4033-9732-a0e1a6a8844b" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f1</seg>
         </bo>
+        <position x="50.0" y="52.0"/>
         <primaryLabelPosition x="5.0" y="10.0"/>
       </element>
-      <element id="67" autoContentsFilter="allow_fundamental">
+      <element uuid="a1aa4642-ecd4-4865-9ddf-907cb67633c5" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -403,34 +407,35 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>m4</seg>
+        <seg>M4</seg>
       </bo>
       <position x="1470.0" y="319.0"/>
       <size width="358.0" height="81.0"/>
     </element>
-    <element id="4" manual="true" autoContentsFilter="allow_type">
-      <element id="5" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+    <element uuid="bf996423-bff7-4186-a174-35de9448b47b" manual="true">
+      <element uuid="8bd0e4a9-b35a-453b-8a31-10cfcec2da43" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>dof6</seg>
+          <seg>DOF6</seg>
         </bo>
-        <position x="310.0" y="10.0"/>
+        <position x="320.0" y="10.0"/>
       </element>
-      <element id="6" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <element uuid="3013f1a1-e38b-4951-a0b2-2a2145f85494" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>i2c_bus</seg>
         </bo>
-        <position x="297.0" y="54.0"/>
+        <position x="303.0" y="55.0"/>
       </element>
-      <element id="7" autoContentsFilter="allow_fundamental">
+      <element uuid="08c8295d-add1-49f2-a873-29bc6f67d9bc" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f1</seg>
         </bo>
+        <position x="312.0" y="42.0"/>
         <primaryLabelPosition x="5.0" y="10.0"/>
       </element>
-      <element id="81" autoContentsFilter="allow_fundamental">
+      <element uuid="6cd8f453-5860-43cd-b63a-88abfb5cc38e" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -438,20 +443,20 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>mpu9250</seg>
+        <seg>MPU9250</seg>
       </bo>
       <position x="374.0" y="182.0"/>
-      <size width="362.0" height="93.0"/>
+      <size width="362.0" height="95.0"/>
     </element>
-    <element id="29" manual="true" autoContentsFilter="allow_type">
-      <element id="30" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+    <element uuid="5c40fece-56db-4da5-910d-7edf79f80534" manual="true">
+      <element uuid="b117497a-df4b-4550-8967-fec9b860099e" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>uart_bus</seg>
         </bo>
-        <position x="167.0" y="35.0"/>
+        <position x="173.0" y="35.0"/>
       </element>
-      <element id="82" autoContentsFilter="allow_fundamental">
+      <element uuid="34e80828-c4ff-4965-b5e9-a5223e26a88b" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -464,36 +469,37 @@
       <position x="132.0" y="440.0"/>
       <size width="239.0" height="81.0"/>
     </element>
-    <element id="31" manual="true" autoContentsFilter="allow_type">
-      <element id="33" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+    <element uuid="ce433702-8ff8-465b-b7e8-92e8b272f9a8" manual="true">
+      <element uuid="e0ac16b3-8446-406f-a683-5530d9bd4cdb" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>syslink_packet_rx</seg>
+          <seg>Syslink_Packet_RX</seg>
         </bo>
-        <position x="323.0" y="44.0"/>
+        <position x="325.0" y="45.0"/>
       </element>
-      <element id="32" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <element uuid="aefdf7c7-873d-4506-a535-d20335cdb88a" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>syslink_packet_tx</seg>
+          <seg>Syslink_Packet_TX</seg>
         </bo>
-        <position x="324.0"/>
+        <position x="326.0"/>
       </element>
-      <element id="34" autoContentsFilter="allow_fundamental">
+      <element uuid="97ebc8ca-897e-4e2c-9525-9cfd8c612af5" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f1</seg>
         </bo>
+        <position x="413.0" y="32.0"/>
         <primaryLabelPosition x="5.0" y="10.0"/>
       </element>
-      <element id="94">
+      <element uuid="fd46bbd0-06ed-4147-893d-e57f96743efd" manual="true">
         <bo>
           <seg>pvg</seg>
-          <seg>deployment_properties::actual_processor_binding</seg>
-          <seg>29</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>5c40fece-56db-4da5-910d-7edf79f80534</seg>
         </bo>
       </element>
-      <element id="75" autoContentsFilter="allow_fundamental">
+      <element uuid="b56c2416-f321-4804-afed-a04d18580d27" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -501,13 +507,13 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>nrf51822_firmware</seg>
+        <seg>nRF51822_Firmware</seg>
       </bo>
       <position x="20.0" y="80.0"/>
-      <size width="463.0" height="83.0"/>
+      <size width="463.0" height="85.0"/>
     </element>
-    <element id="3" manual="true" autoContentsFilter="allow_type">
-      <element id="77" autoContentsFilter="allow_fundamental">
+    <element uuid="cf43472f-5ffe-47e5-9006-90e4653377b6" manual="true">
+      <element uuid="ab3b18cb-29b8-432a-b62f-3e3cd7fe49c6" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -515,41 +521,41 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>pwm</seg>
+        <seg>PWM</seg>
       </bo>
       <position x="1542.0" y="430.0"/>
       <size width="198.0" height="50.0"/>
     </element>
-    <element id="24" manual="true" autoContentsFilter="allow_type">
-      <element id="25" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+    <element uuid="d63e7622-c7eb-4ec0-97c3-fa82c685cfb3" manual="true">
+      <element uuid="2571f03c-bdc1-4ec2-8f9f-d09ebff32b7d" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>i2c_bus</seg>
         </bo>
         <position y="20.0"/>
       </element>
-      <element id="28" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <element uuid="a02e0864-825a-4624-a7cc-95212438eee9" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>pwm_bus</seg>
         </bo>
-        <position x="326.0" y="60.0"/>
+        <position x="333.0" y="60.0"/>
       </element>
-      <element id="26" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="44fe1be3-5dd0-4d57-9563-d251ed6e8d05" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>spi_bus</seg>
         </bo>
-        <position y="64.0"/>
+        <position y="65.0"/>
       </element>
-      <element id="27" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="9c19a857-1fce-4796-9655-c472c5dfe007" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>uart_bus</seg>
         </bo>
-        <position y="108.0"/>
+        <position y="110.0"/>
       </element>
-      <element id="74" autoContentsFilter="allow_fundamental">
+      <element uuid="a5201b7b-fa00-462a-8907-99ff20dcb5f8" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -557,83 +563,90 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>stm32f405</seg>
+        <seg>STM32F405</seg>
       </bo>
       <position x="870.0" y="364.0"/>
-      <size width="403.0" height="147.0"/>
+      <size width="403.0" height="150.0"/>
     </element>
-    <element id="35" manual="true" autoContentsFilter="allow_type">
-      <element id="38" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+    <element uuid="45c9488d-5ee5-45a8-8fa5-3aee3b7f2783" manual="true">
+      <element uuid="b7d10047-4085-4cb4-89cd-f4261eb5832f" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
-          <seg>dofs</seg>
+          <seg>DOFs</seg>
         </bo>
         <position y="131.0"/>
       </element>
-      <element id="39" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <element uuid="bd39c5ba-5368-42e9-90b9-fccc04d8e9f6" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>rate_1</seg>
+          <seg>Rate_1</seg>
         </bo>
-        <position x="513.0" y="20.0"/>
+        <position x="522.0" y="20.0"/>
       </element>
-      <element id="40" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <element uuid="f803678a-6a72-48c7-835d-5685020383df" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>rate_2</seg>
+          <seg>Rate_2</seg>
         </bo>
-        <position x="513.0" y="101.0"/>
+        <position x="522.0" y="101.0"/>
       </element>
-      <element id="41" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <element uuid="25a50647-bb93-4bff-84cb-17eca8087fa3" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>rate_3</seg>
+          <seg>Rate_3</seg>
         </bo>
-        <position x="513.0" y="145.0"/>
+        <position x="522.0" y="146.0"/>
       </element>
-      <element id="42" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <element uuid="2340335c-8da2-4f8b-95a0-7da35c2ea107" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>rate_4</seg>
+          <seg>Rate_4</seg>
         </bo>
-        <position x="513.0" y="189.0"/>
+        <position x="522.0" y="191.0"/>
       </element>
-      <element id="36" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="44cc84e4-4c8a-4129-be8e-1406de9b85da" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
-          <seg>syslink_packet_rx</seg>
+          <seg>Syslink_Packet_Rx</seg>
         </bo>
         <position y="20.0"/>
       </element>
-      <element id="37" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <element uuid="2400f9f4-c2b6-496d-adac-4cec8114d622" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
-          <seg>syslink_packet_tx</seg>
+          <seg>Syslink_Packet_Tx</seg>
         </bo>
-        <position y="64.0"/>
+        <position y="65.0"/>
       </element>
-      <element id="43" autoContentsFilter="allow_fundamental">
+      <element uuid="3408c42a-9989-44ab-aad2-7a2b3bd3aa78" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f1</seg>
         </bo>
         <primaryLabelPosition x="5.0" y="10.0"/>
       </element>
-      <element id="44" autoContentsFilter="allow_fundamental">
+      <element uuid="30dd8977-68cf-4693-b5c7-49595a6d4ef5" manual="true">
         <bo>
           <seg>flow_specification</seg>
           <seg>f2</seg>
         </bo>
         <primaryLabelPosition x="-262.0" y="-92.0"/>
       </element>
-      <element id="91">
+      <element uuid="09ab469c-9340-4396-93fe-3c410ff25cbe" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>f3</seg>
+        </bo>
+        <position x="50.0" y="97.0"/>
+      </element>
+      <element uuid="03a258ad-d665-473c-9806-b5a7b8853170" manual="true">
         <bo>
           <seg>pvg</seg>
-          <seg>deployment_properties::actual_processor_binding</seg>
-          <seg>24</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>d63e7622-c7eb-4ec0-97c3-fa82c685cfb3</seg>
         </bo>
       </element>
-      <element id="62" autoContentsFilter="allow_fundamental">
+      <element uuid="43863452-25a2-43ca-9810-96e3d005fae1" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -641,13 +654,13 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>stm32f405_firmware</seg>
+        <seg>STM32F405_Firmware</seg>
       </bo>
       <position x="800.0" y="60.0"/>
-      <size width="574.0" height="228.0"/>
+      <size width="574.0" height="231.0"/>
     </element>
-    <element id="1" manual="true" autoContentsFilter="allow_type">
-      <element id="80" autoContentsFilter="allow_fundamental">
+    <element uuid="982a2dd1-68fc-4952-813a-2024be38fe5c" manual="true">
+      <element uuid="9be74fd5-3c80-4abe-a8ca-1f2410ebad34" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>sc_type</seg>
@@ -655,19 +668,19 @@
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>uart</seg>
+        <seg>UART</seg>
       </bo>
       <position x="500.0" y="478.0"/>
       <size width="190.0" height="50.0"/>
     </element>
     <bo>
       <seg>classifier</seg>
-      <seg>crazyflie_system.impl</seg>
+      <seg>Crazyflie_System.impl</seg>
     </bo>
     <position x="20.0" y="20.0"/>
     <size width="1998.0" height="691.0"/>
   </element>
-  <config>
+  <config type="structure">
     <enabledAadlProperties>
       <property>deployment_properties::allowed_memory_binding</property>
       <property>deployment_properties::actual_function_binding</property>
@@ -679,7 +692,7 @@
     </enabledAadlProperties>
     <context>
       <seg>classifier</seg>
-      <seg>crazyflie_system::crazyflie_system.impl</seg>
+      <seg>Crazyflie_System::Crazyflie_System.impl</seg>
     </context>
   </config>
 </diagram:Diagram>
