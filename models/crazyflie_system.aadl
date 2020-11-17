@@ -5,7 +5,8 @@ public
   with Crazyflie_Software;
   with Cheddar_Transformation_Properties;
 
-  system Crazyflie_System extends Crazyflie_Hardware::Crazyflie
+  system Crazyflie_System
+  	extends Crazyflie_Hardware::Crazyflie 
   end Crazyflie_System;
 
   system implementation Crazyflie_System.impl

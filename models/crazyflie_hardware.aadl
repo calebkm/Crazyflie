@@ -128,7 +128,6 @@ public
 
   properties
     Dispatch_Protocol => Sporadic;
-
   end Propeller;
 
   ---------------
@@ -164,7 +163,5 @@ public
     C7: bus access M3.pwm_bus -> PWM;
     C8: bus access M4.pwm_bus -> PWM;
     C9: bus access STM32F405.pwm_bus -> PWM;
-
   end Crazyflie.impl;
-
 end Crazyflie_Hardware;

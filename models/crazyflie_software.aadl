@@ -4,14 +4,14 @@ public
   with Crazyflie_Types;
 
   process nRF51822_Firmware
-    features
-      Syslink_Packet_TX: out data port Crazyflie_Types::Syslink_Packet;
-      Syslink_Packet_RX: in data port Crazyflie_Types::Syslink_Packet;
+  features
+    Syslink_Packet_TX: out data port Crazyflie_Types::Syslink_Packet;
+    Syslink_Packet_RX: in data port Crazyflie_Types::Syslink_Packet;
       
-    flows
-      f1: flow source syslink_Packet_TX{latency => 1 ms .. 2 ms;};
-      -- Caleb Matthiesen addition for question Q2
-      f2: flow sink Syslink_Packet_RX{latency => 1 ms .. 2 ms;};
+  flows
+    f1: flow source syslink_Packet_TX{latency => 1 ms .. 2 ms;};
+    -- Caleb Matthiesen addition for question Q2
+    f2: flow sink Syslink_Packet_RX{latency => 1 ms .. 2 ms;};
   end nRF51822_Firmware;
 
   process STM32F405_Firmware

@@ -104,7 +104,7 @@ public
 	
   flows
   	-- Caleb Matthiesen addition for question Q2	
-    f1: flow source Order {latency => 100 us .. 300 us;}; -- LATENCY HERE?
+    f1: flow source Order {latency => 20 us .. 40 us;}; -- LATENCY HERE?
   end Pilot;
 
   system Crazyflie_Functional_Chain
