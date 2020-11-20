@@ -52,18 +52,18 @@ public
   **};
   end STM32F405;
 
-  -------------------------------------------------------------
-  -- nRF51822, Cortex-M0: Radio comms and power management:  --
-  --   * ON/OFF logic                                        --
-  --   * Enabling power to the rest of the system:           --
-  --       * STM32 											 --
-  --       * sensors 										 --
-  --       * expansion board                                 --
-  --   * Battery charging management and voltage measurement --
-  --   * Master radio boot loader                            --
-  --   * Radio and BLE communication                         --
-  --   * Detect and check installed expansion boards         --
-  -------------------------------------------------------------
+  -----------------------------------------------------------
+  -- nRF51822 Cortex-M0: Radio comms and power management: --
+  -- * ON/OFF logic                                        --
+  -- * Enabling power to the rest of the system:           --
+  --   * STM32 											   --
+  --   * sensors 										   --
+  --   * expansion board                                   --
+  -- * Battery charging management and voltage measurement --
+  -- * Master radio boot loader                            --
+  -- * Radio and BLE communication                         --
+  -- * Detect and check installed expansion boards         --
+  -----------------------------------------------------------
   processor nRF51822 extends Processors::ARM::Generic_ARM
   features
     uart_bus: requires bus access Buses::UART::UART.IMPL;
@@ -146,10 +146,14 @@ public
     M2: device Propeller;
     M3: device Propeller;
     M4: device Propeller;
+    -- Caleb Matthiesen addition for question Q8
+    Flow_Deck: device Flow_Deck;
 
     UART: bus Buses::UART::UART.impl;
     I2C: bus Buses::I2C::I2C.impl;
     PWM: bus PWM;
+    -- Caleb Matthiesen addition for question Q8
+    SPI: bus Buses::SPI::SPI.impl;
 
   connections
     C1: bus access STM32F405.uart_bus -> UART;
@@ -162,6 +166,34 @@ public
     C6: bus access M2.pwm_bus -> PWM;
     C7: bus access M3.pwm_bus -> PWM;
     C8: bus access M4.pwm_bus -> PWM;
+    
     C9: bus access STM32F405.pwm_bus -> PWM;
+    
+    -- Caleb Matthiesen addition for question Q8
+    C16: bus access Flow_Deck.i2c_bus -> i2c;
+    C17: bus access Flow_Deck.spi_bus -> spi;
   end Crazyflie.impl;
+  
+  
+  -- Caleb Matthiesen begin addition for question Q8
+  ----------------------------------------------------------
+  -- Flow deck:                                           --
+  -- * VL53L0x ToF laser sensor (distance up to 2 meters) --
+  -- * PMW3901MB optical motion tracking chip             --
+  ----------------------------------------------------------
+  device Flow_Deck
+  features
+    flow_out: out data port Crazyflie_Types::Three_Axis.impl;
+    spi_bus:  requires bus access Buses::SPI::SPI.impl; -- PMW3901MB
+    i2c_bus:  requires bus access Buses::I2C::I2C.impl; -- VL53L0X
+
+  flows
+    f1: flow source flow_out {latency => 200 us .. 500 us;};
+
+  properties
+    Dispatch_Protocol => Periodic;
+    Period            => 10 ms;
+  end Flow_Deck;
+  -- /Caleb Matthiesen
+  
 end Crazyflie_Hardware;

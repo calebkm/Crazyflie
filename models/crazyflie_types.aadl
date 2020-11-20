@@ -26,8 +26,26 @@ public
     Gyro_X: data Base_Types::Integer_16;
     Gyro_Y: data Base_Types::Integer_16;
     Gyro_Z: data Base_Types::Integer_16;
-
   end Six_Axis.impl;
+  
+  -- Caleb Matthiesen addition for question Q8
+  ----------------
+  -- Three_Axis --
+  -- Raw 3-axis motion sensor information
+  -- from the Flow Deck expansion
+  ----------------
+  data Three_Axis
+  properties
+    Data_Model::Data_Representation => Struct;
+  end Three_Axis;
+
+  data implementation Three_Axis.impl
+  subcomponents
+    Flow_X: data Base_Types::Integer_16; -- PMW3901MB [optical]
+    Flow_Y: data Base_Types::Integer_16; -- PMW3901MB [optical]
+    Flow_Z: data Base_Types::Integer_16; -- VL53L0X   [laser]
+  end Three_Axis.impl;
+  -- /Caleb Matthiesen
 
   --------------------
   -- Syslink_Packet --
@@ -38,5 +56,4 @@ public
   data Syslink_Packet
     --  For now, we model it as an opaque type
   end Syslink_Packet;
-
 end Crazyflie_Types;
