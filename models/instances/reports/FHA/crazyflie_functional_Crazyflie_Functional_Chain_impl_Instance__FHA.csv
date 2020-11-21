@@ -1,0 +1,5 @@
+Component, Error Model Element, Hazard Title, Description, Crossreference, Failure, Failure Effect, Operational Phases, Environment,Risk,Mishap, Failure Condition, Severity, Likelihood, Probability,Target Severity, Target Likelihood, Development Assurance Level, Verification Method, Safety Report, Comment
+Acc," ""Failed on Failed""", ," ""Accelerometer sensor failure"""," """""," ""Loss of Accelerometer sensor readings""", ," ""all""", , , , ,1, C, , , , , , ," ""May be critical as no redundancy on UAV"""
+Gyro," ""Failed on Failed""", ," ""Gyro sensor failure"""," """""," ""Loss of Gryo sensor readings""", ," ""all""", , , , ,1, C, , , , , , ," ""May be critical as no redundancy on UAV"""
+Magneto," ""Failed on Failed""", ," ""Magnetometer sensor failure"""," """""," ""Loss of Magnetometer sensor readings""", ," ""all""", , , , ,1, C, , , , , , ," ""May be critical as no redundancy on UAV"""
+Motors," ""Failed on Failed""", ," ""Motor failure"""," """""," ""Loss of motors""", ," ""all""", , , , ,1, C, , , , , , ," ""Critical failure!"""

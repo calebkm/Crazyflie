@@ -4,7 +4,6 @@ package Crazyflie_functional
 -- from https://wiki.bitcraze.io/doc:crazyflie:dev:fimware:sensor_to_control
 
 public
-
   abstract Accelero
   features
     Accelero_Out : out data port;
@@ -14,7 +13,28 @@ public
 
   properties
     Dispatch_Protocol => Periodic;
-    Period => 4 ms; --  250 Hz
+    Period => 4 ms; -- 250 Hz
+  
+  -- Caleb Matthiesen begin addition for Q9
+  annex emv2 {**
+	use types Crazyflie_Errors;
+	use behavior Crazyflie_Errors::simple; -- definition of error modes
+
+  properties
+	-- Useful for FHA reports
+	EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9;
+									  Distribution => Poisson;] applies to Failed;
+	EMV2::severity => 1 applies to Failed;
+	EMV2::likelihood => C applies to Failed;
+	EMV2::hazards =>
+		([ crossreference => "";
+		   failure => "Loss of Accelerometer sensor readings";
+		   phases => ("all");
+	 	   description => "Accelerometer sensor failure";
+		   comment => "May be critical as no redundancy on UAV";
+		 ]) applies to Failed;
+  **};
+  -- /Caleb Matthiesen
   end Accelero;
 
   abstract Gyro
@@ -26,7 +46,27 @@ public
     
   properties
     Dispatch_Protocol => Periodic;
-    Period => 4 ms; --  250 Hz
+    Period => 4 ms; -- 250 Hz
+    
+  -- Caleb Matthiesen begin addition for Q9
+  annex emv2 {**
+	use types Crazyflie_Errors;
+	use behavior Crazyflie_Errors::simple;
+
+  properties
+	EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9;
+									  Distribution => Poisson;] applies to Failed;
+	EMV2::severity => 1 applies to Failed;
+	EMV2::likelihood => C applies to Failed;
+	EMV2::hazards =>
+		([ crossreference => "";
+		   failure => "Loss of Gryo sensor readings";
+		   phases => ("all");
+	 	   description => "Gyro sensor failure";
+		   comment => "May be critical as no redundancy on UAV";
+		 ]) applies to Failed;
+  **};
+  -- /Caleb Matthiesen
   end Gyro;
 
   abstract Magneto
@@ -38,7 +78,27 @@ public
     
   properties
     Dispatch_Protocol => Periodic;
-    Period => 4 ms; --  250 Hz
+    Period => 4 ms; -- 250 Hz
+  
+  -- Caleb Matthiesen begin addition for Q9
+  annex emv2 {**
+	use types Crazyflie_Errors;
+	use behavior Crazyflie_Errors::simple;
+
+  properties
+	EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9;
+									  Distribution => Poisson;] applies to Failed;
+	EMV2::severity => 1 applies to Failed;
+	EMV2::likelihood => C applies to Failed;
+	EMV2::hazards =>
+		([ crossreference => "";
+		   failure => "Loss of Magnetometer sensor readings";
+		   phases => ("all");
+	 	   description => "Magnetometer sensor failure";
+		   comment => "May be critical as no redundancy on UAV";
+		 ]) applies to Failed;
+  **};
+  -- /Caleb Matthiesen
   end Magneto;
 
   abstract Sensor_Fusion
@@ -46,7 +106,7 @@ public
     Accelero_In : in data port;
     Gyro_In     : in data port;
     Magneto_In  : in data port;
-    Data_F_Out  : out data port; -- Fusioned data
+    Data_F_Out  : out data port; -- Fused data
     
   flows
     f1 : flow path Accelero_In -> Data_F_Out {latency => 200 us .. 400 us; };	
@@ -54,7 +114,7 @@ public
     	   
   properties
     Dispatch_Protocol => Periodic;
-    Period => 4 ms; --  250 Hz
+    Period => 4 ms; -- 250 Hz
   end Sensor_Fusion;
 
   abstract Controller
@@ -80,9 +140,29 @@ public
     f1 : flow sink Motor_In {latency => 100 us .. 500 us; };
     			
   properties
---    Dispatch_Protocol => Aperiodic;
+    -- Dispatch_Protocol => Aperiodic;
     Dispatch_Protocol => Periodic;
     Period => 2ms;
+  
+  -- Caleb Matthiesen begin addition for Q9
+  annex emv2 {**
+	use types Crazyflie_Errors;
+	use behavior Crazyflie_Errors::simple;
+
+  properties
+	EMV2::OccurrenceDistribution => [ ProbabilityValue => 1.0e-9;
+									  Distribution => Poisson;] applies to Failed;
+	EMV2::severity => 1 applies to Failed;
+	EMV2::likelihood => C applies to Failed;
+	EMV2::hazards =>
+		([ crossreference => "";
+		   failure => "Loss of motors";
+		   phases => ("all");
+	 	   description => "Motor failure";
+		   comment => "Critical failure!";
+		 ]) applies to Failed;
+  **};
+  -- /Caleb Matthiesen
   end Motors;
 
   abstract Pilot
@@ -126,6 +206,24 @@ public
   	f_etef1bis : end to end flow Gyro.f1 -> C4 -> Controller.f2 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
     f_etef2 : end to end flow Acc.f1 -> C1 -> Fusion.f1 -> C5 -> Controller.f1 -> C6 -> Motors.f1 { latency => 0 ms .. 2 ms;};
     
+  -- Caleb Matthiesen addition for Q11
+  annex EMV2 {**
+	use types Crazyflie_Errors;
+	use behavior Crazyflie_Errors::simple;
+	composite error behavior
+	states
+		[ Acc.Operational
+			and Gyro.Operational
+			and Magneto.Operational
+		]-> Operational;
+		[ Acc.Failed
+			or Gyro.Failed
+			or Magneto.Failed
+			or Motors.failed
+		]-> Failed;
+	end composite;
+  **};
+  -- /Caleb Matthiesen
   end Crazyflie_Functional_Chain.impl;
-
+  
 end Crazyflie_functional;
