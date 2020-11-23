@@ -104,7 +104,7 @@ public
 	
   flows
   	-- Caleb Matthiesen addition for question Q2	
-    f1: flow source Order {latency => 20 us .. 40 us;}; -- LATENCY HERE?
+    f1: flow source Order {latency => 20 us .. 40 us;};
   end Pilot;
 
   system Crazyflie_Functional_Chain
@@ -143,14 +143,14 @@ public
     f_etef2: end to end flow Acc.f1 -> C1 -> Fusion.f1 -> C5
     	-> Controller.f1 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
     	
+    -- Gyro to Controller to Motors
+  	f_etef1bis: end to end flow Gyro.f1 -> C4 -> 
+  		Controller.f2 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
+  		
     -- Caleb Matthiesen addition for question Q2
     -- Magnetometer to Fusion to Controller to Motors
     f_etef3: end to end flow Magneto.f1 -> C3 -> Fusion.f3 -> C5
     	-> Controller.f1 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
-    	
-    -- Gyro to Controller to Motors
-  	f_etef1bis: end to end flow Gyro.f1 -> C4 -> 
-  		Controller.f2 -> C6 -> Motors.f1 {latency => 0 ms .. 2 ms;};
     
     -- Caleb Matthiesen addition for question Q2
     -- Commander (Pilot) to Controller to Motors
