@@ -202,6 +202,23 @@
       </ownedPropertyAssociation>
       <flowSpecification href="../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedFlowSpecification.1"/>
     </flowSpecification>
+    <flowSpecification name="f3" source="//@componentInstance.4/@featureInstance.2" destination="//@componentInstance.4/@featureInstance.3">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="200">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.2"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="400">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.2"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedFlowSpecification.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <flowSpecification href="../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedFlowSpecification.2"/>
+    </flowSpecification>
     <subcomponent xsi:type="aadl2:AbstractSubcomponent" href="../crazyflie_functional.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedAbstractSubcomponent.4"/>
     <index>0</index>
     <classifier xsi:type="aadl2:AbstractType" href="../crazyflie_functional.aadl#Crazyflie_functional.Sensor_Fusion"/>

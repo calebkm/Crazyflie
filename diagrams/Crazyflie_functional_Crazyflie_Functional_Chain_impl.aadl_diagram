@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
   <element uuid="aa029ef5-3e93-4213-a2f1-bc9a61d2efe8" manual="true">
+    <element uuid="34af913b-23bc-4859-8200-0496cecf30cf" manual="true">
+      <bo>
+        <seg>annex_subclause</seg>
+        <seg>EMV2</seg>
+        <seg>0</seg>
+      </bo>
+      <position/>
+      <size width="116.0" height="35.0"/>
+    </element>
     <element uuid="1d7412ec-cb28-419c-94b2-13cb8b24dd57" manual="true">
       <element uuid="03fe0fe8-8569-49a2-9928-acd49baed67a" manual="true">
         <bo>
@@ -198,6 +207,15 @@
       <size width="370.0" height="122.0"/>
     </element>
     <element uuid="993b3bcd-3c18-4c00-aba6-46d77b5380ef" manual="true">
+      <element uuid="2c44baf2-0b62-439c-8f19-bc93b92a82ce" manual="true">
+        <bo>
+          <seg>annex_subclause</seg>
+          <seg>EMV2</seg>
+          <seg>0</seg>
+        </bo>
+        <position/>
+        <size width="116.0" height="35.0"/>
+      </element>
       <element uuid="e00ca441-a2af-4bb0-8587-d6c4922b7763" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
@@ -239,6 +257,12 @@
           <seg>f2</seg>
         </bo>
         <primaryLabelPosition x="5.0" y="10.0"/>
+      </element>
+      <element uuid="342f8aa4-badc-44cc-8a3f-e101fea78277" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>f3</seg>
+        </bo>
       </element>
       <element uuid="c93c82ef-344e-4f5f-8535-d2a4e0d43082" manual="true">
         <bo>
